@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <form action="/update/{{old_task.sno}}", method="POST">
+        <div class="mb-3">
+          <label for="title" class="form-label">Update Task</label>
+          <input type="text" class="form-control" id="title" name="title" value="{{old_task.title}}" aria-describedby="desc" required>
+        </div>
+        <div class="mb-3">
+          <label for="desc" class="form-label">Description</label>
+          <input type="text" class="form-control" id="desc" name="desc" value="{{old_task.desc}}">
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Deadline</label>
+          <input type="date" class="form-control" id="date" name="date" >
+      </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}
