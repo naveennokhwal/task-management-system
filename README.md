@@ -36,6 +36,11 @@ pip install flask
 pip install flask_sqlalchemy  # Install SQLAlchemy for the dataset
 ```
 
+### Create SQL Data
+```flask shell
+from app import db
+db.create_all()
+```
 ### Run the Application
 Run app.py and click on the generated link. This will direct you to a website running locally.
 
